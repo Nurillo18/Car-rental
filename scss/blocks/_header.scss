@@ -1,7 +1,24 @@
+:root{ 
+    --body-bold-bg: #fff;
+    --text-white-color:#000; 
+    --text-color:#000;
+    --mood-bg:#F5F5F5;
+    --hero-con:#fff;
+    --ser-card :#F5F5F5;
+}
+.dark{
+    --body-bold-bg: #1C1C1C;
+    --text-white-color:#fff; 
+    --text-color:#fff;
+    --mood-bg:#272727;
+    --hero-con:#000;
+    --ser-card:#272727;
 
+}
 .site-header{
     padding: 18px 0;
     border-bottom: 1.5px solid #E5E7EA;
+    background-color: var(--body-bold-bg);
 }
 .header-inner{
     display: flex;
@@ -22,7 +39,7 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
-    color: #000000;
+    color: var(--text-color);
 }
 .header__item-link{
     position: relative;
@@ -31,7 +48,11 @@
     font-size: 18px;
     line-height: 22px;
     text-align: center;
-    color: #000000;
+    color: var(--text-color);
+}
+.header__item-link:hover{
+    background: #F5F5F5;
+    border-radius: 100px;
 }
 .header__item:nth-child(2){
     cursor: pointer;
@@ -41,7 +62,10 @@
     font-size: 18px;
     line-height: 22px;
     text-align: center;
-    color: #000000;
+    color: var(--text-color);
+}
+.header__item:nth-child(3){
+    color: var(--text-color);
 }
 .header__item-link--drop:hover{
     background: #F5F5F5;
@@ -60,7 +84,7 @@
     font-size: 18px;
     line-height: 22px;
     text-align: center;
-    color: #000000;
+    color: var(--clr-text);
 }
 .drop, .header__drop--drop{
     transition: height 0.2s;
@@ -85,7 +109,7 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
-    color: #000000;
+    color: var(--text-color);
 
     &:hover{
         background-color: #F5F5F5;
@@ -119,13 +143,13 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
-    color: #000000;
+    color: var(--color-texts);
 }
 .header__mood-btn, .modal__mood-btn{
     width: 58px;
     height: 58px;
     margin-right: 16px;
-    background: #F5F5F5;
+    background: var(--mood-bg);
     border-radius: 100px;
     cursor: pointer;
     border: none;
@@ -181,7 +205,7 @@
     width: 40px;
     height: 2.5px;
     border-radius: 10px;
-    background-color: #000000;
+    background-color: var(--color-texts);
 
     & + & {
         margin-top: 8px;
@@ -222,7 +246,7 @@
     font-size: 28px;
     line-height: 34px;
     text-align: right;
-    color: #000000;
+    color: var(--text-color);
 }
 .modal__item + .modal__item{
     margin-top: 52px;
@@ -244,7 +268,7 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
-    color: #000000;
+    color: var(--text-color);
 }
  
 .modal__inner-list, .modalhelp__inner-list{
@@ -259,7 +283,7 @@
     font-size: 24px;
     line-height: 29px;
     text-align: right;
-    color: #555555;
+    color: var(--text-color);
 }
 .open{
     height: 114px;
@@ -332,14 +356,14 @@
         font-size: 36px;
         line-height: 44px;
         text-align: center;
-        color: #000000;
+        color: var(--text-color);
     }
     & > p{
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
         text-align: center;
-        color: #555555;
+        color: var(--text-color);
     }
 }
 .form{
@@ -392,9 +416,13 @@
     font-size: 16px;
     line-height: 20px;
     text-align: center;
-    color: #000000;
+    color: var(--text-color);
     
 }
+.header__phone{
+    color: var(--text-color);
+}
+
 .form__login-btn{
     width: 100%;
     padding: 18px 0;
@@ -415,6 +443,7 @@
     color: red;
     padding-left: 20px;
 }
+
 @media only screen and (max-width:1034px) {
     .header__list, .header__mood-btn,.header__login-btn, .header__phone{
         display: none;

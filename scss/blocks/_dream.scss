@@ -1,6 +1,8 @@
 .dream-section__heading {
   @include mainheading();
   margin-bottom: 10px;
+  color: var(--text-white-color);
+  
 }
 .dream-section{
   padding-bottom: 160px;
@@ -15,7 +17,7 @@
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-  color: #555555;
+  color: var(--text-white-color);
 }
 
 .button__list {
@@ -64,13 +66,18 @@
   margin-bottom: 40px;
   padding: 0;
   list-style-type: none;
+  color: var(--text-white-color);
+}
+.dream__card:hover{
+  background-color:  #299764;
+  color: #fff;
 }
 
 .dream__card {
   max-width: 387px;
   width: 100%;
   padding: 30px 0;
-  background: #f5f5f5;
+  background: var(--ser-card);
   border-radius: 16px;
 }
 
@@ -79,7 +86,6 @@
 }
 
 .card__heading {
-  @include mainheading(600, 24px);
   margin-bottom: 8px;
   text-align: start;
   line-height: 29px;
@@ -113,7 +119,6 @@
   display: flex;
   align-items: center;
   margin: 0;
-  @include mainheading(500, 16px);
   line-height: 20px;
 }
 
@@ -150,3 +155,23 @@
   }
 
 }
+
+@media only screen and(max-width: 530px) {
+ .button__list-btn{
+  width: 100px;
+  font-size: 14px;
+  line-height: 17px;
+ }
+ .dream__card, .dream__car-information{
+  width: 100%;
+ }
+ .card__image{
+  width: 100%;
+  transform: scale(0.7);
+ }
+
+ .dream-section{
+  padding-bottom: 100px;
+}
+}
+

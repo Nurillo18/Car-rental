@@ -18,9 +18,14 @@ let elForm = document.querySelector(".form");
 let elWrongEmail = document.querySelector(".form__wrong");
 let elWrongPass = document.querySelector(".form__wrong-password");
 let elSubmitBtn = document.querySelector(".form__login-btn");
+let elMood = document.querySelector(".header__mood-btn");
 
 let emailValid = false;
 let passValid = false;
+
+elMood.addEventListener("click", function () {
+  document.body.classList.toggle("dark");
+});
 
 function checkValidatin(element, wrong, bool) {
   element.addEventListener("blur", function (evt) {
@@ -35,7 +40,13 @@ function checkValidatin(element, wrong, bool) {
     }
   });
 }
-
+function checkValid() {
+  if (emailValid && passValid) {
+    console.log("boldi");
+  } else {
+    console.log("bolmadi");
+  }
+}
 checkValidatin(elINputEmail, elWrongEmail, emailValid);
 checkValidatin(elInputPass, elWrongPass, passValid);
 elSubmitBtn.addEventListener("click", function () {
@@ -73,6 +84,10 @@ loginCard.addEventListener("click", function (evt) {
     loginCard.classList.remove("open-bg");
     elINputEmail.value = "";
     elInputPass.value = "";
+    elINputEmail.classList.remove("invalid");
+    elInputPass.classList.remove("invalid");
+    elWrongEmail.textContent = "";
+    elInputPass.textContent = "";
   }
 });
 

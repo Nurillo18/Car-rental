@@ -354,6 +354,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  background-color: var(--body-bold-bg);
 }
 
 .visually-hidden {
@@ -394,9 +395,28 @@ main {
   padding: 0 16px;
 }
 
+:root {
+  --body-bold-bg: #fff;
+  --text-white-color:#000;
+  --text-color:#000;
+  --mood-bg:#F5F5F5;
+  --hero-con:#fff;
+  --ser-card:#F5F5F5;
+}
+
+.dark {
+  --body-bold-bg: #1C1C1C;
+  --text-white-color:#fff;
+  --text-color:#fff;
+  --mood-bg:#272727;
+  --hero-con:#000;
+  --ser-card:#272727;
+}
+
 .site-header {
   padding: 18px 0;
   border-bottom: 1.5px solid #E5E7EA;
+  background-color: var(--body-bold-bg);
 }
 
 .header-inner {
@@ -421,7 +441,7 @@ main {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
-  color: #000000;
+  color: var(--text-color);
 }
 
 .header__item-link {
@@ -431,7 +451,12 @@ main {
   font-size: 18px;
   line-height: 22px;
   text-align: center;
-  color: #000000;
+  color: var(--text-color);
+}
+
+.header__item-link:hover {
+  background: #F5F5F5;
+  border-radius: 100px;
 }
 
 .header__item:nth-child(2) {
@@ -442,7 +467,11 @@ main {
   font-size: 18px;
   line-height: 22px;
   text-align: center;
-  color: #000000;
+  color: var(--text-color);
+}
+
+.header__item:nth-child(3) {
+  color: var(--text-color);
 }
 
 .header__item-link--drop:hover {
@@ -465,7 +494,7 @@ main {
   font-size: 18px;
   line-height: 22px;
   text-align: center;
-  color: #000000;
+  color: var(--clr-text);
 }
 
 .drop, .header__drop--drop {
@@ -492,7 +521,7 @@ main {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
-  color: #000000;
+  color: var(--text-color);
 }
 .drop__link:hover {
   background-color: #F5F5F5;
@@ -530,14 +559,14 @@ main {
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
-  color: #000000;
+  color: var(--color-texts);
 }
 
 .header__mood-btn, .modal__mood-btn {
   width: 58px;
   height: 58px;
   margin-right: 16px;
-  background: #F5F5F5;
+  background: var(--mood-bg);
   border-radius: 100px;
   cursor: pointer;
   border: none;
@@ -595,7 +624,7 @@ main {
   width: 40px;
   height: 2.5px;
   border-radius: 10px;
-  background-color: #000000;
+  background-color: var(--color-texts);
 }
 .header__line + .header__line {
   margin-top: 8px;
@@ -639,7 +668,7 @@ main {
   font-size: 28px;
   line-height: 34px;
   text-align: right;
-  color: #000000;
+  color: var(--text-color);
 }
 
 .modal__item + .modal__item {
@@ -665,7 +694,7 @@ main {
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
-  color: #000000;
+  color: var(--text-color);
 }
 
 .modal__inner-list, .modalhelp__inner-list {
@@ -681,7 +710,7 @@ main {
   font-size: 24px;
   line-height: 29px;
   text-align: right;
-  color: #555555;
+  color: var(--text-color);
 }
 
 .open {
@@ -762,14 +791,14 @@ main {
   font-size: 36px;
   line-height: 44px;
   text-align: center;
-  color: #000000;
+  color: var(--text-color);
 }
 .login__top-conetnt > p {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-  color: #555555;
+  color: var(--text-color);
 }
 
 .form {
@@ -829,7 +858,11 @@ main {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  color: #000000;
+  color: var(--text-color);
+}
+
+.header__phone {
+  color: var(--text-color);
 }
 
 .form__login-btn {
@@ -940,7 +973,7 @@ main {
   font-size: 36px;
   line-height: 44px;
   text-align: center;
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .hero__text {
@@ -948,13 +981,13 @@ main {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .swiper-button-next, .swiper-button-prev {
   padding: 60px;
   border-radius: 50%;
-  background-color: #FFFFFF;
+  background-color: var(--text-color);
   transform: scale(0.3) translateY(550px);
 }
 
@@ -1034,6 +1067,7 @@ main {
   text-align: center;
   color: #000;
   margin-bottom: 10px;
+  color: var(--text-white-color);
 }
 
 .dream-section {
@@ -1050,7 +1084,7 @@ main {
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-  color: #555555;
+  color: var(--text-white-color);
 }
 
 .button__list {
@@ -1098,13 +1132,19 @@ main {
   margin-bottom: 40px;
   padding: 0;
   list-style-type: none;
+  color: var(--text-white-color);
+}
+
+.dream__card:hover {
+  background-color: #299764;
+  color: #fff;
 }
 
 .dream__card {
   max-width: 387px;
   width: 100%;
   padding: 30px 0;
-  background: #f5f5f5;
+  background: var(--ser-card);
   border-radius: 16px;
 }
 
@@ -1113,14 +1153,6 @@ main {
 }
 
 .card__heading {
-  margin: 0;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 44px;
-  text-align: center;
-  color: #000;
   margin-bottom: 8px;
   text-align: start;
   line-height: 29px;
@@ -1153,14 +1185,6 @@ main {
   display: flex;
   align-items: center;
   margin: 0;
-  margin: 0;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 44px;
-  text-align: center;
-  color: #000;
   line-height: 20px;
 }
 
@@ -1195,15 +1219,32 @@ main {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+@media only screen and (max-width: 530px) {
+  .button__list-btn {
+    width: 100px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .dream__card, .dream__car-information {
+    width: 100%;
+  }
+  .card__image {
+    width: 100%;
+    transform: scale(0.7);
+  }
+  .dream-section {
+    padding-bottom: 100px;
+  }
+}
 .community-section {
   padding: 100px 0;
-  background: #F5F5F5;
+  background: var(--ser-card);
 }
 
 .community {
   display: flex;
   justify-content: space-between;
-  background-color: #fff;
+  background-color: var(--body-bold-bg);
   border-radius: 20px;
 }
 
@@ -1238,7 +1279,7 @@ main {
   font-weight: 500;
   font-size: 38px;
   line-height: 50px;
-  color: #000000;
+  color: var(--text-white-color);
 }
 
 .lcomm__line {
@@ -1254,7 +1295,7 @@ main {
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
-  color: #555555;
+  color: var(t--ext-white-color);
 }
 
 .comm__btn {
@@ -1272,7 +1313,7 @@ main {
 .comm__btn:hover {
   background: linear-gradient(0.25turn, #CC2A8E, #F48A57, #F59C51);
   background-color: #34A853;
-  color: #fff;
+  color: var(--text-white-color);
   border: 1px solid transparent;
   z-index: 0 1;
 }
@@ -1318,6 +1359,10 @@ main {
   font-size: 14px;
   line-height: 20px;
   color: #000000;
+}
+
+.comm__text {
+  color: var(--text-white-color);
 }
 
 .caruel-list__line {
@@ -1433,11 +1478,11 @@ main {
     padding: 16px 0;
   }
   .caruel-list {
-    padding: 0 16px;
+    padding: 16px;
   }
 }
 .services-section {
-  background: #fff;
+  background: var(--body-bold-bg);
 }
 
 .services {
@@ -1448,7 +1493,7 @@ main {
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
-  color: #000000;
+  color: var(--text-white-color);
   margin: 0;
 }
 
@@ -1483,7 +1528,7 @@ main {
   font-size: 36px;
   line-height: 44px;
   text-align: center;
-  color: #000000;
+  color: var(--text-white-color);
   margin: 0;
 }
 
@@ -1522,7 +1567,7 @@ main {
   font-weight: 500;
   font-size: 32px;
   line-height: 39px;
-  color: #000000;
+  color: var(--text-white-color);
   margin: 0;
 }
 
@@ -1611,7 +1656,7 @@ main {
   font-weight: 600;
   font-size: 36px;
   line-height: 44px;
-  color: #000000;
+  color: var(--text-white-color);
   margin: 0;
 }
 
@@ -1650,7 +1695,7 @@ main {
   font-size: 16px;
   line-height: 22px;
   padding-top: 60px;
-  color: #000000;
+  color: #000;
 }
 
 .after1::after {
@@ -1971,7 +2016,7 @@ main {
   font-size: 14px;
   line-height: 17px;
   color: #555555;
-  margin-top: 8px;
+  margin-top: 15px;
 }
 
 .footer-right__line {
@@ -2351,7 +2396,7 @@ main {
   font-size: 14px;
   line-height: 17px;
   color: #555555;
-  margin-top: 8px;
+  margin-top: 15px;
 }
 
 .footer-right__line {
