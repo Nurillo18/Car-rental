@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,12 +8,11 @@
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-  />
+    />
     <title>Document</title>
-  </head>
-  <body>
+</head>
+<body>
     <!-- Site Header Start  -->
-    <!-- Nurillo header -->
     <header class="site-header">
         <div class="container">
             <div class="header-inner header">
@@ -26,19 +25,19 @@
                             <a class="header__item-link" href="#link">Categories</a>
                         </li>
                         <li class="header__item header__item-link--drop">
-                                About Us
-                                <div class="header__drop drop">
-                                    <a class="drop__link" href="#link">News</a>
-                                    <a class="drop__link" href="#link">Careers</a>
-                                    <a class="drop__link" href="#link">Locations</a>
-                                </div>
+                            About Us
+                            <div class="header__drop drop">
+                                <a class="drop__link" href="#link">News</a>
+                                <a class="drop__link" href="#link">Careers</a>
+                                <a class="drop__link" href="#link">Locations</a>
+                            </div>
                         </li>
                         <li class="header__item header__item-link--drop header__item-help">
                             Help center
-                                <div class="header__drop header__drop--drop ">
-                                    <a class="drop__link" href="#link">FAQ</a>
-                                    <a class="drop__link" href="#link">Contact us</a>
-                                </div>
+                            <div class="header__drop header__drop--drop ">
+                                <a class="drop__link" href="#link">FAQ</a>
+                                <a class="drop__link" href="#link">Contact us</a>
+                            </div>
                         </li>
                         
                     </ul>
@@ -48,7 +47,7 @@
                     <button class="header__mood-btn">
                         <img class="header__mood-igm" src="./images/HeaderIms/mood.svg" alt="Mood Icon" width="15" height="15">
                     </button>
-                    <button class="header__login-btn">Login</button>
+                    <button onclick="openForm()" class="header__login-btn">Login</button>
                 </div>
                 <button class="header__hamburger-btn">
                     <span class="header__line"></span>
@@ -57,354 +56,237 @@
                 </button>
             </div>
         </div>
-        <!-- <div class="header__modal modal">
-            <div class="modal__logo-wrapper">
-                <a class="modal__logo-link" href="./index.html">
-                    <img class="modal__logo-img" src="./images/HeaderIms/site-logo.svg" alt="Modal img" width="150" height="40">
-                </a>
-                <button class="modal__delete header__mood-btn">
-                    <img class="header__mood-igm" src="./images/HeaderIms/delete.svg" alt="Delete Icon" width="9" height="9">
-                </button>
+        <div id="menu" class="header__fixed">
+            <div class="header__modal modal">
+                <div class="modal__logo-wrapper">
+                    <a class="modal__logo-link" href="./index.html">
+                        <img class="modal__logo-img" src="./images/HeaderIms/site-logo.svg" alt="Modal img" width="150" height="40">
+                    </a>
+                    <button class="modal__delete">
+                        <img class="header__mood-igm" src="./images/HeaderIms/delete.svg" alt="Delete Icon" width="9" height="9">
+                    </button>
+                </div>
+                <ul class="modal__list">
+                    <li class="modal__item">
+                        <a class="modal__link" href="#link">Categories</a>
+                    </li>
+                    <li class="modal__item">
+                        <a onclick="handleClick()" class="modal__link" href="#link">About Us</a>
+                        <ul class="modal__inner-list">
+                            <li class="modal__inner-link">
+                                <a class="modal__news" href="#link">News</a>
+                            </li>
+                            <li class="modal__inner-link">
+                                <a class="modal__news" href="#link">Careers</a>
+                            </li>
+                            <li class="modal__inner-link">
+                                <a class="modal__news" href="#link">Locations</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="modal__item">
+                        <a onclick="handleCLickHerl()" class="modal__link" href="#link">Help center</a>
+                        <ul class="modalhelp__inner-list">
+                            <li class="modal__inner-link">
+                                <a class="modal__news" href="#link">FAQ</a>
+                            </li>
+                            <li class="modal__inner-link">
+                                <a class="modal__news" href="#link">Contact us</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="modal__tel-wrapper">
+                    <a class="modal__tel" href="tel:+18554200000">+1 855 420 0000</a>
+                    <div class="modal__links">
+                        <button class="modal__mood-btn">
+                            <img class="header__mood-igm" src="./images/HeaderIms/mood.svg" alt="Mood Icon" width="15" height="15">
+                        </button>
+                        <button class="modal__login-btn">Login</button>
+                    </div>
+                </div>
             </div>
-        </div> -->
+        </div>
+        <div id="login-wrapper" class="header__login-modal Login">
+            <div class="login__content">
+                <button onclick="handleFormDel()" class="login__delete">
+                    <img src="./images/HeaderIms/delete.svg" alt="Delete img" width="9" height="6">
+                </button>
+                <div class="login__top-conetnt">
+                    <h2>Login</h2>
+                    <p>Use the email and password that you login</p>
+                </div>
+                <form class="login__form form" method="post" action="https://echo.htmlacademy.ru">
+                    <input class="form__email form-input" name="user-email" type="email" placeholder="Email" autocomplete="off" aria-label="Enter your email">
+                    <span class="form__wrong"></span>
+                    <label class="form__label">
+                        <input class="form__password form-input" name="user-password" type="password" placeholder="Password" autocomplete="off" aria-label="Enter your Password">
+                        <span class="form__wrong-password"></span>
+                        <img onclick="handleChangeType()" class="form__eye-img" src="./images/community/eye.svg" alt="Eye" width="22" height="15">
+                        <strong class="form__forgot-password">Forgot password</strong>
+                    </label>
+                    <a class="form__create-accound" href="#link">I want to create an account</a>
+                    <button type="button" class="form__login-btn">Login
+                        <img class="form__login-img" src="./images/HeaderIms/login-icon.svg" alt="Login Icon" width="15" height="15">
+                    </button>
+                </form>
+            </div>
+        </div>
     </header>
     <!-- Site Header End  -->
     <!-- Site Main Start  -->
     <main class="site-main">
-        <!-- hero Nurillo -->
         <section class="hero-section">
             <div class="container">
                 <div class="hero">
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <div class="hero__content">
-                                <h2 class="hero__title">Compact cars</h2>
-                                <p class="hero__text">Rent cars as you are comfortable and where you are comfortable.</p>
+                            <div class="swiper-slide">
+                                <div class="hero__content">
+                                    <h2 class="hero__title">Compact cars</h2>
+                                    <p class="hero__text">Rent cars as you are comfortable and where you are comfortable.</p>
+                                </div>
                             </div>
-                          </div>
-                          <div class="swiper-slide">Slide 2</div>
-                          <div class="swiper-slide">Slide 3</div>
+                            <div class="swiper-slide">
+                                <div class="hero__content">
+                                    <h2 class="hero__title">Sports cars</h2>
+                                    <p class="hero__text">Rent cars as you are comfortable and where you are comfortable.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="hero__content">
+                                    <h2 class="hero__title">Vans </h2>
+                                    <p class="hero__text">Rent cars as you are comfortable and where you are comfortable.</p>
+                                </div>
+                            </div>
                         </div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-pagination"></div>
-                      </div>
+                    </div>
+                    <div class="hero__input-wrapper">
+                        <input class="hero__search" type="search" placeholder="Find the car of your dreams" autocomplete="off" aria-label="Enter your task">
+                        <button class="hero__search-btn">
+                            <img src="./images/HeaderIms/seach.svg" alt="Hero search icon" width="17" height="17">
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- dream Nozimjon aka  -->
         <section class="dream-section">
             <div class="container">
                 <div class="dream">
-            <h2 class="dream-section__heading">
-              Choose the car of your dreams
-            </h2>
-            <p class="dream-section__text">
-              We provide our customers with the most incredible driving
-              emotions. That is why there are only world-class cars in our fleet
-            </p>
-            <ul class="button__list">
-              <li class="button__item">
-                <button class="button__list-btn">Compact</button>
-              </li>
-              <li class="button__item">
-                <button class="button__list-btn">Sport cars</button>
-              </li>
-              <li class="button__item">
-                <button class="button__list-btn button__list-small">
-                  Vans
-                </button>
-              </li>
-            </ul>
-            <ul class="dream__cards">
-              <li class="dream__card">
-                <div class="dream__car-information">
-                  <h3 class="card__heading">Ford Fiesta</h3>
-                  <p class="card__description">Economy Car</p>
+                    <h2 class="dream-section__heading">
+                        Choose the car of your dreams
+                    </h2>
+                    <p class="dream-section__text">
+                        We provide our customers with the most incredible driving
+                        emotions. That is why there are only world-class cars in our fleet
+                    </p>
+                    <ul class="button__list">
+                        <li class="button__item">
+                            <button class="button__list-btn button__list-btn--btn-car1 active">Compact</button>
+                        </li>
+                        <li class="button__item">
+                            <button class="button__list-btn button__list-btn--btn-car2">Sport cars</button>
+                        </li>
+                        <li class="button__item">
+                            <button class="button__list-btn button__list-btn--btn-car3">
+                                Vans
+                            </button>
+                        </li>
+                    </ul>
+                    <ul class="dream__cards"></ul>
+                    <button class="button__list-btn-dream">
+                        View all cars
+                    </button>
                 </div>
-                <img
-                  class="card__image"
-                  src="./images/dream_img/carimage.png"
-                  width="387"
-                  height="220"
-                  alt="beautiful car"
-                />
-                <dl class="card__info-list">
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/User.svg"
-                      alt="user icon"
-                    />
-                    5 Seats
-                  </dd>
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/gear.svg"
-                      alt="user icon"
-                    />
-                    Automatic
-                  </dd>
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/File-user.svg"
-                      alt="user icon"
-                    />
-                    21 +Years
-                  </dd>
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/petrol.svg"
-                      alt="user icon"
-                    />1-lit/2.5 km
-                  </dd>
-                </dl>
-              </li>
-              <li class="dream__card">
-                <div class="dream__car-information">
-                  <h3 class="card__heading">Ford Fiesta</h3>
-                  <p class="card__description">Economy Car</p>
-                </div>
-                <img
-                  class="card__image"
-                  src="./images/dream_img/carimage.png"
-                  width="387"
-                  height="220"
-                  alt="beautiful car"
-                />
-                <dl class="card__info-list">
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/User.svg"
-                      alt="user icon"
-                    />
-                    5 Seats
-                  </dd>
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/gear.svg"
-                      alt="user icon"
-                    />
-                    Automatic
-                  </dd>
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/File-user.svg"
-                      alt="user icon"
-                    />
-                    21 +Years
-                  </dd>
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/petrol.svg"
-                      alt="user icon"
-                    />1-lit/2.5 km
-                  </dd>
-                </dl>
-              </li>
-              <li class="dream__card">
-                <div class="dream__car-information">
-                  <h3 class="card__heading">Ford Fiesta</h3>
-                  <p class="card__description">Economy Car</p>
-                </div>
-                <img
-                  class="card__image"
-                  src="./images/dream_img/carimage.png"
-                  width="387"
-                  height="220"
-                  alt="beautiful car"
-                />
-                <dl class="card__info-list">
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/User.svg"
-                      alt="user icon"
-                    />
-                    5 Seats
-                  </dd>
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/gear.svg"
-                      alt="user icon"
-                    />
-                    Automatic
-                  </dd>
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/File-user.svg"
-                      alt="user icon"
-                    />
-                    21 +Years
-                  </dd>
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/petrol.svg"
-                      alt="user icon"
-                    />1-lit/2.5 km
-                  </dd>
-                </dl>
-              </li>
-              <li class="dream__card">
-                <div class="dream__car-information">
-                  <h3 class="card__heading">Ford Fiesta</h3>
-                  <p class="card__description">Economy Car</p>
-                </div>
-                <img
-                  class="card__image"
-                  src="./images/dream_img/carimage.png"
-                  width="387"
-                  height="220"
-                  alt="beautiful car"
-                />
-                <dl class="card__info-list">
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/User.svg"
-                      alt="user icon"
-                    />
-                    5 Seats
-                  </dd>
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/gear.svg"
-                      alt="user icon"
-                    />
-                    Automatic
-                  </dd>
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/File-user.svg"
-                      alt="user icon"
-                    />
-                    21 +Years
-                  </dd>
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/petrol.svg"
-                      alt="user icon"
-                    />1-lit/2.5 km
-                  </dd>
-                </dl>
-              </li>
-              <li class="dream__card">
-                <div class="dream__car-information">
-                  <h3 class="card__heading">Ford Fiesta</h3>
-                  <p class="card__description">Economy Car</p>
-                </div>
-                <img
-                  class="card__image"
-                  src="./images/dream_img/carimage.png"
-                  width="387"
-                  height="220"
-                  alt="beautiful car"
-                />
-                <dl class="card__info-list">
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/User.svg"
-                      alt="user icon"
-                    />
-                    5 Seats
-                  </dd>
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/gear.svg"
-                      alt="user icon"
-                    />
-                    Automatic
-                  </dd>
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/File-user.svg"
-                      alt="user icon"
-                    />
-                    21 +Years
-                  </dd>
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/petrol.svg"
-                      alt="user icon"
-                    />1-lit/2.5 km
-                  </dd>
-                </dl>
-              </li>
-              <li class="dream__card">
-                <div class="dream__car-information">
-                  <h3 class="card__heading">Ford Fiesta</h3>
-                  <p class="card__description">Economy Car</p>
-                </div>
-                <img
-                  class="card__image"
-                  src="./images/dream_img/carimage.png"
-                  width="387"
-                  height="220"
-                  alt="beautiful car"
-                />
-                <dl class="card__info-list">
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/User.svg"
-                      alt="user icon"
-                    />
-                    5 Seats
-                  </dd>
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/gear.svg"
-                      alt="user icon"
-                    />
-                    Automatic
-                  </dd>
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/File-user.svg"
-                      alt="user icon"
-                    />
-                    21 +Years
-                  </dd>
-                  <dd class="card__info-data">
-                    <img
-                      class="card__info-image"
-                      src="./images/dream_img/petrol.svg"
-                      alt="user icon"
-                    />1-lit/2.5 km
-                  </dd>
-                </dl>
-              </li>
-            </ul>
-            <button class="button__list-btn button__list-btn-dream">
-              View all cars
-            </button>
-          </div>
             </div>
         </section>
         <!-- Nurillo Comunity -->
         <section class="community-section">
             <div class="container">
-                <div class="community"></div>
+                <div class="community comm">
+                    <div class="comm__content">
+                        <div class="comm__basic-content">
+                            <strong class="comm__google">From Google</strong>
+                            <h2 class="comm__title">Hear what the community is saying</h2>
+                        </div>
+                        <span class="lcomm__line"></span>
+                        <div class="comm__right-links">
+                            <p class="comm__text">More interesting reviews on Instagram</p>
+                            <button class="comm__btn">Instagram</button>
+                        </div>
+                    </div>
+                    <div class="comm__carusel">
+                        <ul class="comm__list-car caruel-list">
+                            <li class="caruel-list__item">
+                                <div class="caruel-list__top">
+                                    <div class="caruel-list__left-part">
+                                        <img src="./images/community/avatar.svg" alt="Avatar" width="42" height="42">
+                                        <div class="caruel-list__top-content">
+                                            <h2 class="caruel-list__title">Savannah Nguyen</h2>
+                                            <a href="mailto:savannahnguyen@gmail.com">savannahnguyen@gmail.com</a>
+                                        </div>
+                                    </div>
+                                    <img src="./images/community/google.svg" alt="Google Img" width="20" height="20">
+                                </div>
+                                <p class="caruel-list__text">Sagittis sed tortor, elementum vitae varius sodales consectetur. Vitae arcu ut morbi bibendum ullamcorper feugiat. Venenatis hendrerit cursus egestas sit ornare nunc vulputate aliquam sapien. Pulvinar nunc consectetur nibh consectetur mollis mauris est mauris amet. Sed hac vehicula id et dui morbi quam pulvinar condimentum. Senectus sed varius interdum nunc, arcu vulputate massa.</p>
+                                <span class="caruel-list__line"></span>
+                                <div class="caruel-list__start">
+                                    Star rating:
+                                    <img src="./images/community/starts.svg" alt="start" width="124" height="20" >
+                                </div>
+                            </li>
+                            <li class="caruel-list__item">
+                                <div class="caruel-list__top">
+                                    <div class="caruel-list__left-part">
+                                        <img src="./images/community/girl-avatar.svg" alt="Avatar" width="42" height="42">
+                                        <div class="caruel-list__top-content">
+                                            <h2 class="caruel-list__title">Ronald Richards</h2>
+                                            <a href="mailto:savannahnguyen@gmail.com">ronaldrichards@gmail.com</a>
+                                        </div>
+                                    </div>
+                                    <img src="./images/community/google.svg" alt="Google Img" width="20" height="20">
+                                </div>
+                                <p class="caruel-list__text">Placerat pulvinar in amet sem id gravida nisi leo. A dignissim est pellentesque mi quisque vel mi ut. Porttitor blandit auctor odio a ornare felis tortor bibendum molestie. </p>
+                                <div class="caruel-list__bottom">
+                                    <span class="caruel-list__line"></span>
+                                    <div class="caruel-list__start">
+                                        Star rating:
+                                        <img src="./images/community/starts.svg" alt="start" width="124" height="20" >
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="caruel-list__item">
+                                <div class="caruel-list__top">
+                                    <div class="caruel-list__left-part">
+                                        <img src="./images/community/avatar.svg" alt="Avatar" width="42" height="42">
+                                        <div class="caruel-list__top-content">
+                                            <h2 class="caruel-list__title">Savannah Nguyen</h2>
+                                            <a href="mailto:savannahnguyen@gmail.com">savannahnguyen@gmail.com</a>
+                                        </div>
+                                    </div>
+                                    <img src="./images/community/google.svg" alt="Google Img" width="20" height="20">
+                                </div>
+                                <p class="caruel-list__text">Sagittis sed tortor, elementum vitae varius sodales consectetur. Vitae arcu ut morbi bibendum ullamcorper feugiat. Venenatis hendrerit cursus egestas sit ornare nunc vulputate aliquam sapien. Pulvinar nunc consectetur nibh consectetur mollis mauris est mauris amet. Sed hac vehicula id et dui morbi quam pulvinar condimentum. Senectus sed varius interdum nunc, arcu vulputate massa.</p>
+                                <span class="caruel-list__line"></span>
+                                <div class="caruel-list__start">
+                                    Star rating:
+                                    <img src="./images/community/starts.svg" alt="start" width="124" height="20" >
+                                </div>
+                            </li>
+                        </ul> 
+                        <div class="comm__btns btn">
+                            <button onclick="prevClick()" class="btn__prev-btn">
+                                <img class="btn__prev-img" src="./images/community/drop.svg" alt="Next img" width="4" height="7">
+                            </button>
+                            <button onclick="nextClick()" class="btn__next-btn">
+                                <img class="btn__next-img" src="./images/community/drop.svg" alt="prev img" width="4" height="7">
+                            </button>
+                        </div>  
+                    </div>
+                </div>
             </div>
         </section>
         <!-- services Nodirbek -->
@@ -414,84 +296,205 @@
                     <!-- Services header -->
                     <div class="services-header">
                         <h3 class="services-header__title">More than 50 brands of cars</h3>
-                        <div class="services-header__images">
-                            <img src="./images//services_img/image1.avif" alt="">
-                            <img src="./images//services_img/image2.avif" alt="">
-                            <img src="./images//services_img/image3.avif" alt="">
-                            <img src="./images//services_img/image4.avif" alt="">
-                            <img src="./images//services_img/image5.avif" alt="">
-                            <img src="./images//services_img/image6.avif" alt="">
+                        <ul class="services-header__images">
+                            <li class="services-header__images-item"><img src="./images//services_img/image1.avif" alt="componies-logo"></li>
+                            <li class="services-header__images-item"><img src="./images//services_img/image2.avif" alt="componies-logo"></li>
+                            <li class="services-header__images-item"><img src="./images//services_img/image3.avif" alt="componies-logo"></li>
+                            <li class="services-header__images-item"><img src="./images//services_img/image4.avif" alt="componies-logo"></li>
+                            <li class="services-header__images-item"><img src="./images//services_img/image5.avif" alt="componies-logo"></li>
+                            <li class="services-header__images-item"><img src="./images//services_img/image6.avif" alt="componies-logo"></li>
+                        </ul>
+                        <!-- Services main -->
+                        <div class="services-main">
+                            <div class="services-main__wrapper">
+                                <h2 class="services-main__heading">Unparalleled service</h2>
+                                <p class="services-main__text">Whether you are looking for Newark Airport car rental, an insurance replacement vehicle or minivan to take on vacation Car rental has it all.</p>
+                            </div>
+                            <ul class="services-main__cards">
+                                <li class="services-main__card">
+                                    <h2 class="services-main__card-title psevda1">Book online, pay online</h2>
+                                    <p class="services-main__card-text">Complete the booking process A-Z, with our easy online system</p>
+                                </li>
+                                <li class="services-main__card">
+                                    <h2 class="services-main__card-title psevda2">Unparalleled customer service</h2>
+                                    <p class="services-main__card-text">We're here to help. We pride ourselves in our customer service</p>
+                                </li>
+                                <li class="services-main__card">
+                                    <h2 class="services-main__card-title psevda3">Guaranteed car reservation</h2>
+                                    <p class="services-main__card-text">When you book with Car rental, you can be confident your car will be waiting for you</p>
+                                </li>
+                                <li class="services-main__card">
+                                    <h2 class="services-main__card-title psevda4">No reservation or booking fees</h2>
+                                    <p class="services-main__card-text">No cancellation fees if cancelled 24 hours prior to booking time</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Services footer -->
+                        <div class="services-footer">
+                            <div class="services-footer__header">
+                                <h2 class="services-footer__title">Car rental keeps you safe</h2>
+                                <p class="services-footer__text">The safety of our employees and renters is our number one priority. In addition to being confident your vehicle is cleaned and sanitized every time you rent, you can also feel confident that we will take every opportunity to enhance the health and safety measures currently practiced in our operations.</p>
+                            </div>
+                            <ul class="services-footer__cards">
+                                <li class="services-footer__card">                  
+                                    <p class="services-footer__card-text after1">Every car is thoroughly sanitized and cleaned</p>
+                                </li>
+                                <li class="services-footer__card">
+                                    <p class="services-footer__card-text after2">All of our employees wear masks</p>
+                                </li>
+                                <li class="services-footer__card">
+                                    <p class="services-footer__card-text after3">We stay up to date with all protocol from the CDC</p>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <!-- Services main -->
-                    <div class="services-main">
-                        <h2 class="services-main__heading">Unparalleled service</h2>
-                        <p class="services-main__text">Whether you are looking for Newark Airport car rental, an insurance replacement vehicle or minivan to take on vacation Car rental has it all.</p>
-                        <div class="services-main__cards">
-                            <div class="services-main__card">
-                                <div class="services-main__card-wrap">
-                                    <h2 class="services-main__card-title">Book online, pay online</h2>
-                                    <img class="services-main__card-img" src="./images//services_img/desktop.svg" alt="">
-                                </div>
-                                <p class="services-main__card-text">Complete the booking process A-Z, with our easy online system</p>
+                </div>
+            </section>
+        </main>
+        <!-- Site Main End  -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-inner">
+                    <div class="footer-left">
+                        <div class="footer-left__top">
+                            <img class="footer-left__logo" src="./images//HeaderIms//site-logo.svg" alt="site-logo">
+                            <p class="footer-left__text">Car rental offers a wide range of cars available for rent in Newark EWR Airport NJ. We pride ourselves in our customer service, and hassle-free renting experience.</p>
+                        </div>
+                        <p class="footer-left__bottom">© 2022 Car rental Terms & Conditions</p>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-right__top">
+                            <div class="footer-right__top-wrapper">
+                                <p class="footer-right__top-heading">Main</p>
+                                <ul class="footer-right__top-list">
+                                    <li class="footer-right__top-item">
+                                        <a class="footer-right__top-link" href="#">My Bookings</a>
+                                    </li>
+                                    <li class="footer-right__top-item">
+                                        <a class="footer-right__top-link" href="#">Reservation</a>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="services-main__card">
-                                <div class="services-main__card-wrap">
-                                    <h2 class="services-main__card-title">Unparalleled customer service</h2>
-                                    <img class="services-main__card-img" src="./images//services_img/shield.svg" alt="">
-                                </div>
-                                <p class="services-main__card-text">We're here to help. We pride ourselves in our customer service</p>
+                            <div class="footer-right__top-wrapper">
+                                <p class="footer-right__top-heading">Categories</p>
+                                <ul class="footer-right__top-list">
+                                    <li class="footer-right__top-item">
+                                        <a class="footer-right__top-link" href="#">Compact</a>
+                                    </li>
+                                    <li class="footer-right__top-item">
+                                        <a class="footer-right__top-link" href="#">Sports cars</a>
+                                    </li>
+                                    <li class="footer-right__top-item">
+                                        <a class="footer-right__top-link" href="#">Vans</a>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="services-main__card">
-                                <div class="services-main__card-wrap">
-                                    <h2 class="services-main__card-title">Guaranteed car reservation</h2>
-                                    <img class="services-main__card-img" src="./images//services_img/user-clock.svg" alt="">
-                                </div>
-                                <p class="services-main__card-text">When you book with Car rental, you can be confident your car will be waiting for you</p>
+                            <div class="footer-right__top-wrapper list3">
+                                <p class="footer-right__top-heading">Company</p>
+                                <ul class="footer-right__top-list">
+                                    <li class="footer-right__top-item">
+                                        <a class="footer-right__top-link" href="#">About us</a>
+                                    </li>
+                                    <li class="footer-right__top-item">
+                                        <a class="footer-right__top-link" href="#">Careers</a>
+                                    </li>
+                                    <li class="footer-right__top-item">
+                                        <a class="footer-right__top-link" href="#">News</a>
+                                    </li>
+                                    <li class="footer-right__top-item">
+                                        <a class="footer-right__top-link" href="#">Contact us</a>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="services-main__card">
-                                <div class="services-main__card-wrap">
-                                    <h2 class="services-main__card-title">No reservation or booking fees</h2>
-                                    <img class="services-main__card-img" src="./images//services_img/wallet.svg" alt="">
-                                </div>
-                                <p class="services-main__card-text">No cancellation fees if cancelled 24 hours prior to booking time</p>
+                            <div class="footer-right__top-wrapper list4">
+                                <p class="footer-right__top-heading">Our Locations</p>
+                                <ul class="footer-right__top-list">
+                                    <li class="footer-right__top-item">
+                                        <address class="footer-right__top-address" href="#">2118 Thornridge Cir. Syracuse</address>
+                                    </li>
+                                    <li class="footer-right__top-item">
+                                        <address class="footer-right__top-address" href="#">4140 Parker Rd. Allentown</address>
+                                    </li>
+                                    <li class="footer-right__top-item">
+                                        <address class="footer-right__top-address" href="#">4517 Washington Ave.</address>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
-                    <!-- Services footer -->
-                    <div class="services-footer">
-                        <h2>Car rental keeps you safe</h2>
-                        <p>The safety of our employees and renters is our number one priority. In addition to being confident your vehicle is cleaned and sanitized every time you rent, you can also feel confident that we will take every opportunity to enhance the health and safety measures currently practiced in our operations.</p>
-                        <div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                        <span class="footer-right__line"></span>
+                        <div class="footer-right__bottom">
+                            <div class="footer-right__bottom-wrapper">
+                                <p class="footer-right__bottom-heading">Contact</p>
+                                <ul class="footer-right__bottom-list">
+                                    <li class="footer-right__bottom-item">
+                                        <a class="footer-right__bottom-link" href="tel:+1 855 420 0000">+1 855 420 0000</a>
+                                    </li>
+                                    <li class="footer-right__bottom-item">
+                                        <a class="footer-right__bottom-link" href="mailto:carrental@gmail.com">carrental@gmail.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-right__bottom-wrapper">
+                                <p class="footer-right__bottom-heading">Hours of operation</p>
+                                <ul class="footer-right__bottom-list">
+                                    <li class="footer-right__bottom-item">
+                                        <time class="footer-right__bottom-link" href="tel:+1 855 420 0000">8:00 - 21:00 Mon-Sat</time>
+                                    </li>
+                                    <li class="footer-right__bottom-item">
+                                        <time class="footer-right__bottom-link" href="mailto:carrental@gmail.com">9:00 - 15:00 Sundays</time>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-right__bottom-wrapper">
+                                <p class="footer-right__bottom-heading">Social network</p>
+                                <ul class="footer-right__bottom-links">
+                                    <li class="footer-right__bottom-links--instagram">
+                                        <a class="footer-right__bottom-links-link" href="#" target="_blank">
+                                            <img class="footer-right__img-instagram" src="./images//footer_img/instagram.svg" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="footer-right__bottom-links--twitter">
+                                        <a class="footer-right__bottom-links-link" href="#" target="_blank">
+                                            <img class="footer-right__img-twitter" src="./images//footer_img/twitter.svg" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="footer-right__bottom-links--facebook">
+                                        <a class="footer-right__bottom-links-link" href="#" target="_blank">
+                                            <img class="footer-right__img-facebook" src="./images//footer_img/facebook.svg" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="footer-right__bottom-links--call">
+                                        <a class="footer-right__bottom-links-link" href="#" target="_blank">
+                                            <img class="footer-right__img-call" src="./images//footer_img/call.svg" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="footer-right__bottom-btnWrap">
+                                        <button class="footer-right__bottom-btn" type="button"></button>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
-    <!-- Site Main End  -->
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-inner footer"></div>
-      </div>
-    </footer>
-    <!-- Site Footer End  -->
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          pagination: {
-          el: ".swiper-pagination",
-          dynamicBullets: true,
-        },
-        });
-      </script>
-  </body>
-</html>
+        </footer>
+        
+        <!-- Site Footer End  -->
+        
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <script src="./js/app.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    dynamicBullets: true,
+                },
+            });
+        </script>
+    </body>
+    </html>
+    

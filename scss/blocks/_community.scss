@@ -1,0 +1,226 @@
+
+
+.community-section{
+    padding: 100px 0;
+    background: #F5F5F5;
+}
+
+.community{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 20px;
+}
+.comm__content{
+    width: 35%;
+}
+.comm__carusel{
+    background: #299764;
+    padding: 50px 0 40px 0;
+    width: 65%;
+}
+.comm__content{
+    padding: 70px 50px 70px 70px;
+}
+.comm__google{
+    padding-left: 28px;
+    background-image: url("../images/community/small-google.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #4285F4;
+}
+.comm__title{
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 50px;
+    color: #000000;
+}
+.lcomm__line{
+    margin-bottom: 30px;
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-image:linear-gradient(90deg, #EA4335 19.83%, #FBBC05 65%, #34A853 82.29%, #4285F4 100%);
+}
+.comm__text{
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #555555;
+}
+.comm__btn{
+    position: relative;
+    width: 194px;
+    padding: 18px 0;
+    background: #FFFFFF;
+    border-radius: 100px;
+    color: #EE2A7B;
+    background-clip: text;
+    border: 1px solid #EE2A7B;
+    cursor: pointer;
+
+    &:hover{
+        background: linear-gradient(0.25turn, #CC2A8E, #F48A57, #F59C51);
+        background-color: #34A853;
+        color: #fff;
+        border: 1px solid transparent;
+        z-index:0 1;
+    }
+}
+.caruel-list__item{
+    position: relative;
+    width: 420px;
+    padding: 24px;
+    background: #FFFFFF;
+    border-radius: 16px;
+}
+.caruel-list__top, .caruel-list__left-part{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.caruel-list__top{
+    margin-bottom: 14px;
+}
+.caruel-list__top-content{
+    margin-left: 12px;
+
+    & > a{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #555555;
+    }
+}
+.caruel-list__title{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.caruel-list__text{
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+.caruel-list__line{
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color:  #E5E7EA;
+}
+.caruel-list__start{
+    display: flex;
+    align-items: center;
+
+
+    & > img {
+        margin-left: 17px;
+    }
+}
+.caruel-list{
+    display: flex;
+    overflow-x: auto;
+    padding-left: 40px;
+    scroll-behavior: smooth;
+}
+.caruel-list::-webkit-scrollbar{
+    display: none;
+}
+.caruel-list__item + .caruel-list__item {
+    margin-left: 20px;
+}
+.btn__prev-img{
+    transform: rotate(180deg);
+}
+.btn__prev-btn, .btn__next-btn{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    cursor: pointer;
+    border: none;
+}
+.btn__prev-btn{
+    margin-right: 12px;
+}
+.btn{
+    padding: 20px 40px 0 0;
+    text-align: right;
+}
+.caruel-list__bottom{
+   position: absolute;
+   bottom: 26px;
+}
+
+
+@media only screen and (max-width:942px){
+    .comm{
+        display: flex;
+        flex-direction: column;
+    }
+    .comm__content, .comm__carusel{
+        width: 100%;
+    }
+    .comm__content{
+        padding: 30px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .comm__basic-content{
+        width: 320px;
+    }
+    .comm__title{
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 0;
+    }
+    .lcomm__line{
+        margin-bottom: 0;
+
+        transform: rotate(90deg);
+        width: 108px;
+    }
+}
+
+@media only screen and (max-width:650px){
+    .comm__content{
+        flex-direction: column;
+    }
+    .comm__basic-content{
+        width: 100%;
+    }
+    .comm__title{
+        font-size: 38px;
+        line-height: 50px;
+    }
+    .lcomm__line{
+        margin: 30px 0;
+        transform: rotate(180deg);
+        width: 100%;
+    }
+    .comm__right-links{
+        width: 100%;
+    }
+    .caruel-list__item{
+        width: 100%;
+    }
+    .comm__carusel{
+        padding: 16px 0 ;
+    }
+    .caruel-list{
+        padding:0 16px;
+    }
+}
