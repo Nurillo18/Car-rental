@@ -1,0 +1,27 @@
+@mixin button(
+  $width: 155px,
+  $color: #fff,
+  $border-radius: 100px,
+  $bgColor: #299764
+) {
+  display: inline-block;
+  width: $width;
+  padding: 16px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.115385px;
+  color: $color;
+  background: $bgColor;
+  box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+  border-radius: $border-radius;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    background: $color;
+  }
+}

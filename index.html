@@ -1,19 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+  />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Site Header Start  -->
     <!-- Nurillo header -->
     <header class="site-header">
         <div class="container">
-            <div class="header-inner header"></div>
+            <div class="header-inner header">
+                <div class="header__logo-part">
+                    <a class="header__logo-link" href="./index.html">
+                        <img class="header__logo-img" src="./images/HeaderIms/site-logo.svg" alt="Site Logo" width="150" height="40">
+                    </a>
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a class="header__item-link" href="#link">Categories</a>
+                        </li>
+                        <li class="header__item header__item-link--drop">
+                                About Us
+                                <div class="header__drop drop">
+                                    <a class="drop__link" href="#link">News</a>
+                                    <a class="drop__link" href="#link">Careers</a>
+                                    <a class="drop__link" href="#link">Locations</a>
+                                </div>
+                        </li>
+                        <li class="header__item header__item-link--drop header__item-help">
+                            Help center
+                                <div class="header__drop header__drop--drop ">
+                                    <a class="drop__link" href="#link">FAQ</a>
+                                    <a class="drop__link" href="#link">Contact us</a>
+                                </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="header__tel-part">
+                    <a class="header__phone" href="tel:+18554200000">+1 855 420 0000</a>
+                    <button class="header__mood-btn">
+                        <img class="header__mood-igm" src="./images/HeaderIms/mood.svg" alt="Mood Icon" width="15" height="15">
+                    </button>
+                    <button class="header__login-btn">Login</button>
+                </div>
+                <button class="header__hamburger-btn">
+                    <span class="header__line"></span>
+                    <span class="header__line"></span>
+                    <span class="header__line"></span>
+                </button>
+            </div>
         </div>
+        <!-- <div class="header__modal modal">
+            <div class="modal__logo-wrapper">
+                <a class="modal__logo-link" href="./index.html">
+                    <img class="modal__logo-img" src="./images/HeaderIms/site-logo.svg" alt="Modal img" width="150" height="40">
+                </a>
+                <button class="modal__delete header__mood-btn">
+                    <img class="header__mood-igm" src="./images/HeaderIms/delete.svg" alt="Delete Icon" width="9" height="9">
+                </button>
+            </div>
+        </div> -->
     </header>
     <!-- Site Header End  -->
     <!-- Site Main Start  -->
@@ -21,7 +74,23 @@
         <!-- hero Nurillo -->
         <section class="hero-section">
             <div class="container">
-                <div class="hero"></div>
+                <div class="hero">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="hero__content">
+                                <h2 class="hero__title">Compact cars</h2>
+                                <p class="hero__text">Rent cars as you are comfortable and where you are comfortable.</p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">Slide 2</div>
+                          <div class="swiper-slide">Slide 3</div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                </div>
             </div>
         </section>
         <!-- dream Nozimjon aka  -->
@@ -404,12 +473,25 @@
         </section>
     </main>
     <!-- Site Main End  -->
-    <!-- Site Footer Start  -->
     <footer class="site-footer">
-        <div class="container">
-            <div class="footer-inner footer"></div>
-        </div>
+      <div class="container">
+        <div class="footer-inner footer"></div>
+      </div>
     </footer>
     <!-- Site Footer End  -->
-</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        },
+        });
+      </script>
+  </body>
 </html>
