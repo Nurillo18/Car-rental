@@ -1,0 +1,40 @@
+@mixin button(
+  $width: 155px,
+  $color: #fff,
+  $border-radius: 100px,
+  $bgColor: #299764
+) {
+  display: inline-block;
+  width: $width;
+  padding: 16px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color;
+  background: $bgColor;
+  box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+  border-radius: $border-radius;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    background: $bgColor;
+  }
+}
+
+@mixin mainheading($fWeight: 600, $fSize: 36px, $color: #000) {
+  margin: 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: $fWeight;
+  font-size: $fSize;
+  line-height: 44px;
+  text-align: center;
+  color: $color;
+}
