@@ -25,3 +25,14 @@
     background: $color;
   }
 }
+
+@mixin mainheading($fWeight: 600, $fSize: 36px, $color: #000) {
+  margin: 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: $fWeight;
+  font-size: $fSize;
+  line-height: 44px;
+  text-align: center;
+  color: $color;
+}
