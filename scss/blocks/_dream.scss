@@ -2,7 +2,9 @@
   @include mainheading();
   margin-bottom: 10px;
 }
-
+.dream-section{
+  padding-bottom: 160px;
+}
 .dream-section__text {
   max-width: 575px;
   margin: 0 auto;
@@ -30,13 +32,29 @@
 }
 
 .button__list-btn {
-  @include button(156px);
+  width: 155px;
+  padding: 19px 0;
+  background: #FFFFFF;
+  border: 1.5px solid #E5E7EA;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #000000;
+  cursor: pointer
+  
+}
+.active{
+  background-color: #299764;
+  color: #fff;
+}
+.button__list-btn:focus{
+  background-color: #299764;
+  color: #fff;
 }
 
-.button__list-small {
-  @include button(119px, #000);
-  background-color: #fff;
-}
+
 
 .dream__cards {
   display: grid;
@@ -85,7 +103,7 @@
 .card__info-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
+  
   row-gap: 24px;
   margin: 0;
   margin-left: 20px;
@@ -104,8 +122,18 @@
 }
 
 .button__list-btn-dream {
+  width: 173px;
+  border: none;
+  cursor: pointer;
   display: block;
   margin: 0 auto;
+  padding: 18px 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  background: #299764;
+  border-radius: 100px;
+  color: #FFFFFF;
 }
 
 @media only screen and(max-width: 1200px) {
@@ -120,4 +148,5 @@
     place-items: center;
     grid-template-columns: repeat(1, 1fr);
   }
+
 }
