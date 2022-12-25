@@ -11,9 +11,11 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: 700;
-  line-height: 18px;
-  letter-spacing: -0.115385px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
   color: $color;
   background: $bgColor;
   box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
@@ -22,7 +24,7 @@
   text-decoration: none;
   cursor: pointer;
   &:hover {
-    background: $color;
+    background: $bgColor;
   }
 }
 
