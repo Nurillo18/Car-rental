@@ -2,13 +2,13 @@
 
 .community-section{
     padding: 100px 0;
-    background: #F5F5F5;
+    background:var(--ser-card);
 }
 
 .community{
     display: flex;
     justify-content: space-between;
-    background-color: #fff;
+    background-color: var(--body-bold-bg);
     border-radius: 20px;
 }
 .comm__content{
@@ -38,7 +38,7 @@
     font-weight: 500;
     font-size: 38px;
     line-height: 50px;
-    color: #000000;
+    color: var(--text-white-color);
 }
 .lcomm__line{
     margin-bottom: 30px;
@@ -52,7 +52,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
-    color: #555555;
+    color: var(t--ext-white-color);
 }
 .comm__btn{
     position: relative;
@@ -68,7 +68,7 @@
     &:hover{
         background: linear-gradient(0.25turn, #CC2A8E, #F48A57, #F59C51);
         background-color: #34A853;
-        color: #fff;
+        color:var(--text-white-color);
         border: 1px solid transparent;
         z-index:0 1;
     }
@@ -111,6 +111,9 @@
     font-size: 14px;
     line-height: 20px;
     color: #000000;
+}
+.comm__text{
+    color: var(--text-white-color);
 }
 .caruel-list__line{
     margin-bottom: 20px;
@@ -221,6 +224,6 @@
         padding: 16px 0 ;
     }
     .caruel-list{
-        padding:0 16px;
+        padding: 16px;
     }
 }
